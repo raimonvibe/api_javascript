@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Tutorial</title>
+</head>
+<body>
+  <h2>Viewing Your Weather Data</h2>
+  <p>Curious about the weather? Just glance below to see the current temperature in your chosen location:</p>
+  <div id="weatherResult"></div>
+<script>
+// Reminder: Replace {LOCATION} and {API_KEY} with your actual data
+fetch('https://api.openweathermap.org/data/2.5/weather?q={LOCATION}&appid={API_KEY}&units=metric')
+.then(response => response.json())
+.then(data => {
+    // Handle successful response
+    console.log(data);
+    // Example: Display the weather data on the page
+    document.getElementById('weatherResult').innerHTML = 'The current temperature in ' + data.name + ' is ' + data.main.temp + '°C';
+})
+.catch(error => console.error('Oops, something went wrong:', error));
+</script>
+
+</body>
+</html>
