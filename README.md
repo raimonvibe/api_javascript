@@ -1,5 +1,6 @@
 # # Create the content for the README file
-readme_content = """# Fetch API Tutorial by RaimonCoding
+
+#Fetch API Tutorial by RaimonCoding
 
 This repository contains the code and related resources for the Fetch API tutorial.
 
