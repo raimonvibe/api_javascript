@@ -1,5 +1,5 @@
 # API JavaScript Tutorial
-![Live Site Preview](~/screenshots/raimonvibe_github_io_082416.png)
+![Live Site Preview](./images/raimonvibe_github_io_082416.png)
 
 🌐 **Live Demo:** [https://raimonvibe.github.io/api_javascript/](https://raimonvibe.github.io/api_javascript/)
 
