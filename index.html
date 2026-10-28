@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grabbing Weather Data Like a Pro</title>
     <style>
+        html {
+            /* Stop iOS Safari from inflating text sizes ("text autosizing"),
+               which is what made the page look jumbled on an iPhone. */
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
         body {
             font-family: 'Arial', sans-serif;
+            overflow-wrap: break-word;
             line-height: 1.6;
             padding: 20px;
             background-color: #121212; /* Very dark gray */
@@ -23,6 +30,26 @@
             border: 1px solid #ddd;
             padding: 10px;
             color: #dcdcdc; /* Light gray for code text */
+            max-width: 100%;
+            overflow-x: auto; /* scroll inside the block, never widen the page */
+            border-radius: 6px;
+        }
+        pre code {
+            font-size: 0.9rem;
+        }
+        /* On a phone the whole snippet should be readable without sideways
+           scrolling: wrap long lines (the API URL) inside the block. */
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            pre {
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+            }
+            pre code {
+                font-size: 0.8rem;
+            }
         }
         /* Colorful syntax highlighting for code */
         .keyword { color: #ff79c6; } /* Pink for keywords */
